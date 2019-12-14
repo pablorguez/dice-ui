@@ -1,4 +1,6 @@
 [ignore]
+.*/node_modules/.*
+
 
 [include]
 
@@ -7,5 +9,6 @@
 [lints]
 
 [options]
-
-[strict]
+emoji=true
+suppress_comment=.*\\$FlowFixMe
+suppress_comment=.*\\$FlowExpectError
