@@ -1,0 +1,43 @@
+{
+  "name": "dice-ui",
+  "version": "1.0.0",
+  "description": "Dice UI",
+  "main": "index.js",
+  "repository": "https://github.com/pablorguez/dice-ui.git",
+  "author": "Pablo Rodriguez <pablo.rcampos@gmail.com>",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-system": "^5.1.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-flow": "^7.7.4",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.7.2",
+    "eslint-plugin-react": "^7.17.0",
+    "flow-bin": "^0.114.0",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "webpack": "^4.41.2"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "test": ""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test",
+      "...": "..."
+    }
+  }
+}
