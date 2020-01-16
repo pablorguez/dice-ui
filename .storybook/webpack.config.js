@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = ({ config }) => {
@@ -11,5 +12,11 @@ module.exports = ({ config }) => {
     })
   );
 
-  return config;
+  return Object.assign(config, {
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '..')
+      }
+    }
+  });
 };
