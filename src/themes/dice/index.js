@@ -118,7 +118,8 @@ export default {
     regular: 400,
     bold: 700
   },
-  ...spacings,
+
+  spacings: [0, 4, 8, 16, 32, 64, 128, 256],
 
   zIndices: Array.from(Array(11).keys()).map(value => value * 100),
 };

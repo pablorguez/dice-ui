@@ -4,7 +4,9 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { sortStories } from './util/helpers';
 import { themes } from '@storybook/theming';
 import { ThemeProvider } from 'emotion-theming';
+import styled from '@emotion/styled';
 
+import BaseStyles from '../src/components/BaseStyles';
 import dice from '@/src/themes/dice';
 
 // Add group and story names to the sort order to explicitly order them.
@@ -36,12 +38,30 @@ addParameters({
 
 const withThemeProvider = storyFn => (
   <ThemeProvider theme={dice}>
+    <BaseStyles />
     { storyFn() }
   </ThemeProvider>
 )
 
+const Story = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1rem',
+  justifyContent: 'center',
+  alignItems: 'center',
+  minHeight: '100vh',
+  '.sbdocs &': {
+    minHeight: 'auto'
+  }
+});
+
+const withStoryStyles = storyFn => {
+  return <Story>{storyFn()}</Story>;
+};
+
 addDecorator(withKnobs);
 addDecorator(withThemeProvider);
+addDecorator(withStoryStyles);
 
 // automatically import all files ending in *.stories.js
 configure(

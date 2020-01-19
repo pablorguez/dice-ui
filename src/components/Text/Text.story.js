@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react';
-import { select, number, boolean } from '@storybook/addon-knobs/react';
+import { text, select, number, boolean } from '@storybook/addon-knobs/react';
 
-import docs from './Text.docs.mdx';
 import Text from './Text';
-import { text } from '@storybook/addon-knobs';
+import docs from './Text.docs.mdx';
+
+const content = 'This is a <Text> element';
 
 export default {
-  title: 'Components|Text',
+  title: 'Typography|Text',
   component: Text,
   parameters: {
     docs: { page: docs }
@@ -22,14 +23,22 @@ export const base = () => (
     italic={boolean('italic', false)}
     strike={boolean('strike', false)}
   >
-    This is a Text element.
+    {content}
   </Text>
 )
 
 export const size = () => (
   <Fragment>
-    <Text fontSize="1">This is a size 1 text.</Text>
-    <Text fontSize="2">This is a size 2 text.</Text>
-    <Text fontSize="3">This is a size 3 text.</Text>
+    <Text fontSize="1">{content} of size 1 text.</Text>
+    <Text fontSize="2">{content} of size 2 text.</Text>
+    <Text fontSize="3">{content} of size 3 text.</Text>
   </Fragment>
 )
+
+export const bold = () => <Text bold>{content}</Text>;
+
+export const italic = () => <Text italic>{content}</Text>;
+
+export const strike = () => <Text strike>{content}</Text>;
+
+export const customElement = () => <Text as="span">{content}</Text>;

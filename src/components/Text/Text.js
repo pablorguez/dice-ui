@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { system } from 'styled-system';
+import css from '@styled-system/css'
 
 const StyledText = styled('p')(
   system({
@@ -31,6 +32,9 @@ const StyledText = styled('p')(
       properties: [ 'color' ],
       scale: 'colors'
     }
+  }),
+  css({
+    mb: 2
   })
 )
 
