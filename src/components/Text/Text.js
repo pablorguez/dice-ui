@@ -1,46 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import { system } from 'styled-system';
-import css from '@styled-system/css'
+import { system, color } from 'styled-system';
+import css from '@styled-system/css';
 
 const StyledText = styled('p')(
+  color,
   system({
-    fontSize: {
-      property: 'fontSize',
-      properties: [ 'fontSize' ],
-      scale: 'fontSizes'
-    },
+    fontSize: true,
     bold: {
       property: 'bold',
-      properties: [ 'fontWeight' ],
+      properties: ['fontWeight'],
       scale: 'fontWeights',
       transform: value => value && 'bold'
     },
     italic: {
       property: 'italic',
-      properties: [ 'fontStyle' ],
+      properties: ['fontStyle'],
       transform: value => value && 'italic'
     },
     strike: {
       property: 'strike',
-      properties: [ 'textDecoration' ],
+      properties: ['textDecoration'],
       transform: value => value && 'line-through'
-    },
-    color: {
-      property: 'color',
-      properties: [ 'color' ],
-      scale: 'colors'
     }
   }),
   css({
     mb: 2
   })
-)
+);
 
-const Text = props => (
-  <StyledText { ...props } />
-)
+const Text = props => <StyledText {...props} />;
 
 Text.propTypes = {
   /**
@@ -66,12 +56,12 @@ Text.propTypes = {
   /**
    * strike through
    */
-  strike: PropTypes.bool,
-}
+  strike: PropTypes.bool
+};
 
 Text.defaultProps = {
   as: 'p',
   color: 'colorTextPrimary'
-}
+};
 
 export default Text;
