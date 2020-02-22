@@ -32,11 +32,7 @@ export function sortStories(sortOrder) {
   };
 }
 
-export function splitStoryName(name) {
-  const [group, story] = name.split('|');
-  const [component, ...rest] = story.split('/');
-  return [group, component, ...rest];
-}
+export const splitStoryName = name => name.split('/');
 
 const LINK_PREFIXES = ['/', 'http', 'mailto', '#', 'tel'];
 

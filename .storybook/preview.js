@@ -1,13 +1,13 @@
 import React from 'react';
-import { configure, addDecorator, addParameters } from '@storybook/react';
+import { addDecorator, addParameters } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { sortStories } from './util/helpers';
-import { themes } from '@storybook/theming';
 import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
 
 import BaseStyles from '../src/components/BaseStyles';
-import dice from '@/src/themes/dice';
+import { sortStories } from './util/helpers';
+import { components } from './util/theme';
+import dice from '../src/themes/dice';
 
 // Add group and story names to the sort order to explicitly order them.
 // Items that are not included in the list are shown below the sorted items.
@@ -30,18 +30,10 @@ const SORT_ORDER = {
 addParameters({
   options: {
     storySort: sortStories(SORT_ORDER),
-    theme: themes.dark,
-    panelPosition: 'bottom',
-    isToolshown: true
-  }
+    showRoots: true
+  },
+  docs: { components }
 });
-
-const withThemeProvider = storyFn => (
-  <ThemeProvider theme={dice}>
-    <BaseStyles />
-    { storyFn() }
-  </ThemeProvider>
-)
 
 const Story = styled('div')({
   display: 'flex',
@@ -59,14 +51,13 @@ const withStoryStyles = storyFn => {
   return <Story>{storyFn()}</Story>;
 };
 
-addDecorator(withKnobs);
-addDecorator(withThemeProvider);
-addDecorator(withStoryStyles);
-
-// automatically import all files ending in *.stories.js
-configure(
-  [
-    require.context('../src', true, /\.(stories|story)\.(js|ts|tsx|mdx)$/),
-    require.context('../docs', true, /\.(stories|story)\.(js|ts|tsx|mdx)$/),
-  ], module
+const withThemeProvider = storyFn => (
+  <ThemeProvider theme={dice}>
+    <BaseStyles />
+    {storyFn()}
+  </ThemeProvider>
 );
+
+addDecorator(withKnobs);
+addDecorator(withStoryStyles);
+addDecorator(withThemeProvider);
