@@ -9,7 +9,7 @@ const baseColors = {
     '#007F6D',
     '#007060',
     '#006657',
-    '#005C4E',
+    '#005C4E'
   ],
   orange: [
     '#FDF0E3',
@@ -21,7 +21,7 @@ const baseColors = {
     '#AB3307',
     '#972C07',
     '#7A2405',
-    '#842706',
+    '#842706'
   ],
   red: [
     '#FAEAEA',
@@ -33,7 +33,7 @@ const baseColors = {
     '#970C0C',
     '#890B0B',
     '#6D0909',
-    '#760909',
+    '#760909'
   ],
   green: [
     '#EBF4EC',
@@ -45,7 +45,7 @@ const baseColors = {
     '#2D7738',
     '#276831',
     '#1F5126',
-    '#235C2B',
+    '#235C2B'
   ],
   blue: [
     '#E5F7FF',
@@ -57,7 +57,7 @@ const baseColors = {
     '#005AA3',
     '#004F8F',
     '#003E70',
-    '#004680',
+    '#004680'
   ],
   cloud: [
     '#F5F7F9',
@@ -66,7 +66,7 @@ const baseColors = {
     '#EFF2F5',
     '#DCE3E9',
     '#CAD4DE',
-    '#E8EDF1',
+    '#E8EDF1'
   ],
   ink: [
     '#BAC7D5',
@@ -77,11 +77,11 @@ const baseColors = {
     '#465567',
     '#252A31',
     '#181B20',
-    '#0B0C0F',
+    '#0B0C0F'
   ]
 };
 
-import spacings from './spacings';
+const fontSizes = [12, 14, 16, 24, 32, 48, 64, 96, 128];
 
 export default {
   // -- COLORS --
@@ -90,8 +90,8 @@ export default {
     white: '#fff',
 
     // Text colors
-    colorTextPrimary: baseColors.ink[6],
-    colorTextSecondary: baseColors.cloud[6],
+    colorTextPrimary: baseColors.cloud[2],
+    colorTextSecondary: baseColors.ink[6],
     colorTextSuccess: baseColors.green[3],
     colorTextError: baseColors.red[3],
     colorTextInfo: baseColors.blue[3],
@@ -102,17 +102,23 @@ export default {
     // Background colors
     colorBgBody: baseColors.cloud[0],
     colorBgModal: baseColors.cloud[3],
+
+    // Font Sizes
+    fontSize: {
+      subHeading: {
+        m: fontSizes[2],
+        l: fontSizes[3]
+      }
+    }
   },
 
   // -- FONTS --
   fonts: {
     default:
-    // eslint-disable-next-line
+      // eslint-disable-next-line
       'Inter, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     mono: 'Consolas, monaco, monospace'
   },
-
-  fontSizes: [12, 14, 16, 24, 32, 48, 64, 96, 128],
 
   fontWeights: {
     regular: 400,
@@ -121,5 +127,5 @@ export default {
 
   spacings: [0, 4, 8, 16, 32, 64, 128, 256],
 
-  zIndices: Array.from(Array(11).keys()).map(value => value * 100),
+  zIndices: Array.from(Array(11).keys()).map(value => value * 100)
 };
