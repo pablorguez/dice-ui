@@ -64,16 +64,16 @@ export const components = {
   p: withThemeProvider(Text, { as: 'p', size: 2 }),
   li: withThemeProvider(Text, { as: 'li', size: 2 }),
   strong: withThemeProvider(Text, {
-    as: 'strong',
+    as: 'span',
     size: 2,
     bold: true
   }),
   em: withThemeProvider(Text, {
-    as: 'em',
+    as: 'span',
     size: 2,
     italic: true
   }),
   ul: withThemeProvider(List, { size: 2 }),
   ol: withThemeProvider(List, { ordered: true, size: 2 }),
-  a: withThemeProvider(Link, { size: 2 })
+  a: withThemeProvider(Link, { size: 2 }),
 }
