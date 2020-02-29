@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { text, select, number, boolean } from '@storybook/addon-knobs/react';
 
-import Text from './Text';
+import Text from './';
 import docs from './Text.docs.mdx';
 
 const content = 'This is a <Text> element';
@@ -17,8 +17,12 @@ export default {
 export const base = () => (
   <Text
     as={select('as', ['p', 'div', 'span'], 'p')}
-    color={text('color', 'colorTextPrimary')}
-    fontSize={number('fontSize', 2)}
+    color={select(
+      'color',
+      ['colorTextPrimary', 'colorTextSecondary'],
+      'colorTextPrimary'
+    )}
+    size={number('size', 'm')}
     bold={boolean('bold', false)}
     italic={boolean('italic', false)}
     strike={boolean('strike', false)}
@@ -29,9 +33,9 @@ export const base = () => (
 
 export const size = () => (
   <Fragment>
-    <Text fontSize={1}>{content} of size 1 text.</Text>
-    <Text fontSize={2}>{content} of size 2 text.</Text>
-    <Text fontSize={3}>{content} of size 3 text.</Text>
+    <Text size="s">{content} of size s.</Text>
+    <Text size="m">{content} of size m.</Text>
+    <Text size="l">{content} of size l.</Text>
   </Fragment>
 );
 
@@ -41,4 +45,6 @@ export const italic = () => <Text italic>{content}</Text>;
 
 export const strike = () => <Text strike>{content}</Text>;
 
-export const customElement = () => <Text as="span">{content}</Text>;
+export const customElement = () => (
+  <Text as="span">{content} rendered as a span</Text>
+);

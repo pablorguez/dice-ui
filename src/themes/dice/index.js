@@ -81,7 +81,25 @@ const baseColors = {
   ]
 };
 
-const fontSizes = [12, 14, 16, 24, 32, 48, 64, 96, 128];
+const fontSizes = [12, 14, 16, 24, 32, 48, 64];
+
+fontSizes.text = {
+  s: fontSizes[0],
+  m: fontSizes[1],
+  l: fontSizes[2]
+};
+
+fontSizes.heading = {
+  s: fontSizes[3],
+  m: fontSizes[4],
+  l: fontSizes[5]
+};
+
+fontSizes.subHeading = {
+  s: fontSizes[1],
+  m: fontSizes[2],
+  l: fontSizes[3]
+};
 
 export default {
   // -- COLORS --
@@ -101,17 +119,10 @@ export default {
 
     // Background colors
     colorBgBody: baseColors.cloud[0],
-    colorBgModal: baseColors.cloud[3],
-
-    // Font Sizes
-    fontSize: {
-      subHeading: {
-        m: fontSizes[2],
-        l: fontSizes[3]
-      }
-    }
+    colorBgModal: baseColors.cloud[3]
   },
-
+  // Font Sizes
+  fontSizes,
   // -- FONTS --
   fonts: {
     default:
@@ -125,7 +136,9 @@ export default {
     bold: 700
   },
 
-  spacings: [0, 4, 8, 16, 32, 64, 128, 256],
+  radii: [0, '1px', '2px', '4px', '50%'],
+
+  spacings: [0, 4, 8, 16, 24, 32, 64, 128, 256],
 
   zIndices: Array.from(Array(11).keys()).map(value => value * 100)
 };
