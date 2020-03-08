@@ -38,39 +38,37 @@ const subHeadingStyles = css({
 export const components = {
   h1: withThemeProvider(Heading, {
     as: 'h1',
-    size: 6,
+    size: 'l',
     css: headingStyles
   }),
   h2: withThemeProvider(Heading, {
     as: 'h2',
-    size: 5,
+    size: 'm',
     css: headingStyles
   }),
   h3: withThemeProvider(Heading, {
     as: 'h3',
-    size: 4,
+    size: 'm',
     css: headingStyles
   }),
   h4: withThemeProvider(SubHeading, {
     as: 'h4',
-    size: 3,
+    size: 's',
     css: subHeadingStyles
   }),
   h5: withThemeProvider(SubHeading, {
     as: 'h5',
-    size: 2,
+    size: 's',
     css: subHeadingStyles
   }),
-  p: withThemeProvider(Text, { as: 'p', size: 2 }),
-  li: withThemeProvider(Text, { as: 'li', size: 2 }),
+  p: withThemeProvider(Text, { as: 'p' }),
+  li: withThemeProvider(Text, { as: 'li' }),
   strong: withThemeProvider(Text, {
     as: 'span',
-    size: 2,
     bold: true
   }),
   em: withThemeProvider(Text, {
     as: 'span',
-    size: 2,
     italic: true
   }),
   ul: withThemeProvider(List, { size: 2 }),
