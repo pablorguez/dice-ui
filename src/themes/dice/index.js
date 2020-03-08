@@ -117,6 +117,10 @@ export default {
     colorTextCritical: baseColors.red[3],
     colorTextWhite: baseColors.cloud[0],
 
+    // Link colors
+    colorLinkPrimary: baseColors.brand[3],
+    colorLinkPrimaryHover: baseColors.brand[5],
+
     // Background colors
     colorBgBody: baseColors.cloud[0],
     colorBgModal: baseColors.cloud[3]
