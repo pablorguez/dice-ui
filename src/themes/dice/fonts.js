@@ -30,8 +30,4 @@ const fontWeights = {
   bold: 700,
 };
 
-export {
-  fonts,
-  fontSizes,
-  fontWeights,
-};
+export { fonts, fontSizes, fontWeights };
