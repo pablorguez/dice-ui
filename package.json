@@ -51,7 +51,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 -s .storybook/public",
     "build-storybook": "build-storybook",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "lint": "eslint .",
     "format": "prettier --write 'src/**/*.js'"
   },
