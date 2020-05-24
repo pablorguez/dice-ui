@@ -4,8 +4,8 @@ const sizeVariant = system({
   size: {
     property: 'fontSize',
     scale: 'fontSizes',
-    transform: (value, scale) => value && scale.heading[value]
-  }
+    transform: (value, scale) => value && scale.heading[value],
+  },
 });
 
 export default sizeVariant;

@@ -1,1 +1,1 @@
-# dice-ui
+# DICE UI

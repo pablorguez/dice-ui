@@ -18,7 +18,7 @@ const StyledButton = styled('div', { shouldForwardProp })(
     cursor: 'pointer',
     display: 'flex',
     flex: 'none',
-    justifyContent: 'center'
+    justifyContent: 'center',
   }),
   typeVariant,
   sizeVariant,
@@ -27,18 +27,18 @@ const StyledButton = styled('div', { shouldForwardProp })(
   fullWidthVariant
 );
 
-const Button = props => <StyledButton as="button" {...props} />;
+const Button = (props) => <StyledButton as="button" {...props} />;
 
 Button.propTypes = {
   fullWidth: PropTypes.bool,
   onClick: PropTypes.func,
   rounded: PropTypes.bool,
-  size: PropTypes.oneOf(['s', 'm', 'l'])
+  size: PropTypes.oneOf(['s', 'm', 'l']),
 };
 
 Button.defaultProps = {
   size: 'm',
-  onClick: () => {}
+  onClick: () => {},
 };
 
 export default Button;

@@ -12,13 +12,13 @@ const StyledSubHeading = styled('h3')(
   css({
     textTransform: 'uppercase',
     fontWeight: 'bold',
-    mb: 2
+    mb: 2,
   }),
   sizeVariant,
   noMarginVariant
 );
 
-const SubHeading = props => <StyledSubHeading {...props} />;
+const SubHeading = (props) => <StyledSubHeading {...props} />;
 
 SubHeading.propTypes = {
   /**
@@ -32,12 +32,12 @@ SubHeading.propTypes = {
   /**
    * fontSize
    */
-  size: PropTypes.oneOf(['s', 'm', 'l'])
+  size: PropTypes.oneOf(['s', 'm', 'l']),
 };
 
 SubHeading.defaultProps = {
   as: 'h4',
-  size: 'm'
+  size: 'm',
 };
 
 export default SubHeading;

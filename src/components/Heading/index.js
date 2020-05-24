@@ -12,14 +12,14 @@ const StyledHeading = styled('h2', { shouldForwardProp })(
   css({
     label: 'heading',
     fontWeight: 'bold',
-    mb: 4
+    mb: 4,
   }),
   color,
   sizeVariant,
   noMarginVariant
 );
 
-const Heading = props => <StyledHeading {...props} />;
+const Heading = (props) => <StyledHeading {...props} />;
 
 Heading.propTypes = {
   /**
@@ -37,13 +37,13 @@ Heading.propTypes = {
   /**
    * Remove element's margin
    */
-  noMargin: PropTypes.bool
+  noMargin: PropTypes.bool,
 };
 
 Heading.defaultProps = {
   as: 'h2',
   color: 'colorTextPrimary',
-  size: 'm'
+  size: 'm',
 };
 
 export default Heading;

@@ -14,7 +14,7 @@ const StyledLink = styled('a')(
   sizeVariant
 );
 
-const Link = props => <StyledLink {...props} />;
+const Link = (props) => <StyledLink {...props} />;
 
 Link.propTypes = {
   /**
@@ -25,11 +25,11 @@ Link.propTypes = {
    * Styling you want for the Element
    */
   type: PropTypes.oneOf(['default', 'negative']),
-}
+};
 
 Link.defaultProps = {
   size: 'm',
-  type: 'default'
-}
+  type: 'default',
+};
 
 export default Link;

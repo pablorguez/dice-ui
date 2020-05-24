@@ -9,8 +9,8 @@ export default {
   title: 'Typography/Link',
   component: Link,
   parameters: {
-    docs: { page: docs }
-  }
+    docs: { page: docs },
+  },
 };
 
 export const base = () => <Link>{content}</Link>;

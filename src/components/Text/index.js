@@ -13,7 +13,7 @@ import sizeVariant from './variants/size';
 const StyledText = styled('p', { shouldForwardProp })(
   color,
   css({
-    mb: 2
+    mb: 2,
   }),
   boldVariant,
   italicVariant,
@@ -21,7 +21,7 @@ const StyledText = styled('p', { shouldForwardProp })(
   sizeVariant
 );
 
-const Text = props => <StyledText {...props} />;
+const Text = (props) => <StyledText {...props} />;
 
 Text.propTypes = {
   /**
@@ -47,13 +47,13 @@ Text.propTypes = {
   /**
    * strike through
    */
-  strike: PropTypes.bool
+  strike: PropTypes.bool,
 };
 
 Text.defaultProps = {
   as: 'p',
   size: 'm',
-  color: 'colorTextPrimary'
+  color: 'colorTextPrimary',
 };
 
 export default Text;

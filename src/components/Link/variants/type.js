@@ -9,8 +9,8 @@ const typeVariant = variant({
 
       ':hover': {
         color: 'colorLinkPrimaryHover',
-        textDecoration: 'underline'
-      }
+        textDecoration: 'underline',
+      },
     },
 
     negative: {
@@ -20,10 +20,10 @@ const typeVariant = variant({
 
       ':hover': {
         backgroundColor: 'transparent',
-        color: 'colorLinkPrimary'
-      }
-    }
-  }
-})
+        color: 'colorLinkPrimary',
+      },
+    },
+  },
+});
 
 export default typeVariant;

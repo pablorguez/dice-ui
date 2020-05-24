@@ -8,8 +8,8 @@ export default {
   title: 'Forms/Button',
   component: Button,
   parameters: {
-    docs: { page: docs }
-  }
+    docs: { page: docs },
+  },
 };
 
 export const base = () => <Button>Base button</Button>;

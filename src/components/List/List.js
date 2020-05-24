@@ -7,7 +7,7 @@ import css from '@styled-system/css';
 const StyledList = styled('ol')(
   css({
     fontWeight: 'regular',
-    mb: 3
+    mb: 3,
   })
 );
 
@@ -16,11 +16,11 @@ const List = ({ ordered, ...props }) => (
 );
 
 List.propTypes = {
-  ordered: PropTypes.bool
+  ordered: PropTypes.bool,
 };
 
 List.defaultProps = {
-  ordered: false
+  ordered: false,
 };
 
 export default List;

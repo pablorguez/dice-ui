@@ -6,21 +6,21 @@ const sizeVariant = variant({
     s: {
       fontSize: 'text.s',
       height: '32px',
-      px: 2
+      px: 2,
     },
 
     m: {
       fontSize: 'text.m',
       height: '42px',
-      px: 3
+      px: 3,
     },
 
     l: {
       fontSize: 'text.m',
       height: '52px',
-      px: 4
-    }
-  }
+      px: 4,
+    },
+  },
 });
 
 export default sizeVariant;
