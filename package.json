@@ -19,7 +19,7 @@
     "storybook": "start-storybook -p 6006 -s .storybook/public",
     "build-storybook": "build-storybook",
     "test": "jest --passWithNoTests",
-    "lint": "eslint .",
+    "lint": "eslint ./src",
     "prettier:fix": "prettier --write 'src/**/*.js'"
   },
   "main": "lib/index.js",
