@@ -80,7 +80,7 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.2",
     "husky": "^4.2.5",
-    "jest": "^26.1.0",
+    "jest": "^26.5.2",
     "jest-emotion": "^10.0.32",
     "prettier": "^2.0.5",
     "react-is": "^16.13.1",
