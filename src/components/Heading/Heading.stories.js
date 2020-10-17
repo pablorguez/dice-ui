@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
-import { select, boolean, text, number } from '@storybook/addon-knobs/react';
+import React from 'react';
+import { select, boolean, text, number } from '@storybook/addon-knobs';
 
-import Heading from './';
+import Heading from '.';
 import docs from './Heading.docs.mdx';
 
 const elements = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
@@ -28,9 +28,9 @@ export const base = () => (
 );
 
 export const size = () => (
-  <Fragment>
+  <>
     <Heading size="s">{content} of size s.</Heading>
     <Heading size="m">{content} of size m.</Heading>
     <Heading size="l">{content} of size l.</Heading>
-  </Fragment>
+  </>
 );

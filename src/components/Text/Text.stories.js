@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
-import { text, select, number, boolean } from '@storybook/addon-knobs/react';
+import React from 'react';
+import { select, number, boolean } from '@storybook/addon-knobs';
 
-import Text from './';
+import Text from '.';
 import docs from './Text.docs.mdx';
 
 const content = 'This is a <Text> element';
@@ -32,11 +32,11 @@ export const base = () => (
 );
 
 export const size = () => (
-  <Fragment>
+  <>
     <Text size="s">{content} of size s.</Text>
     <Text size="m">{content} of size m.</Text>
     <Text size="l">{content} of size l.</Text>
-  </Fragment>
+  </>
 );
 
 export const bold = () => <Text bold>{content}</Text>;

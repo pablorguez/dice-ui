@@ -16,7 +16,6 @@ const StyledButton = styled('div', { shouldForwardProp })(
     border: 0,
     borderRadius: 2,
     cursor: 'pointer',
-    display: 'flex',
     flex: 'none',
     justifyContent: 'center',
   }),

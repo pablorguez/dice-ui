@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 
 import BaseStyles from '../src/components/BaseStyles';
 import { sortStories } from './util/helpers';
-import { components } from './util/theme';
+import { components, theme } from './util/theme';
 import dice from '../src/themes/dice';
 
 // Add group and story names to the sort order to explicitly order them.
@@ -32,7 +32,10 @@ addParameters({
     storySort: sortStories(SORT_ORDER),
     showRoots: true
   },
-  docs: { components }
+  docs: {
+    components,
+    theme
+  }
 });
 
 const Story = styled('div')({

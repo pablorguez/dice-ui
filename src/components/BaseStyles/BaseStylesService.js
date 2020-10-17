@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 
-export const createBaseStyles = (theme, custom) => css`
+export const createBaseStyles = (theme) => css`
   /**
    * reset.css
    * http://meyerweb.com/eric/tools/css/reset/

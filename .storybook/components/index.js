@@ -1,6 +1,11 @@
 export {
   Meta,
-  Props,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable,
+  Stories,
   IconGallery,
   IconItem,
   Typeset
