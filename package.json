@@ -62,7 +62,7 @@
     "styled-system": "^5.1.4"
   },
   "devDependencies": {
-    "@adeira/babel-preset-adeira": "^0.4.0",
+    "@adeira/babel-preset-adeira": "^3.0.0",
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",
     "@babel/node": "^7.10.5",
